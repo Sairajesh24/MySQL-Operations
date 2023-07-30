@@ -1,10 +1,10 @@
-# MySQL command for database
+-- # MySQL command for database
 show databases;
 create database [db_name];
 use [db_name];
 drop database [db_name]
 
-# MySQL command for table
+-- # MySQL command for table
 create table [table_name] (col1 , col2, col3 , col4......);
 
 show tables;
