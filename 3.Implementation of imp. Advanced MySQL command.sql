@@ -1,6 +1,6 @@
 mysql> use learn;
 Database changed
-
+--------------------------------------------------------------------------
 mysql> show tables;
 +-----------------+
 | Tables_in_learn |
@@ -8,7 +8,7 @@ mysql> show tables;
 | student         |
 +-----------------+
 1 row in set (0.00 sec)
-
+--------------------------------------------------------------------------
 mysql> select * from student;
 +----------+---------+---------+---------+
 | id       | name    | city    | country |
@@ -21,7 +21,7 @@ mysql> select * from student;
 | 24234236 | ramsigh | lucknow | india   |
 +----------+---------+---------+---------+
 6 rows in set (0.00 sec)
-
+--------------------------------------------------------------------------
 mysql> select * from student;
 +----------+---------+---------+---------+
 | id       | name    | city    | country |
@@ -34,7 +34,7 @@ mysql> select * from student;
 | 24234236 | ramsigh | lucknow | india   |
 +----------+---------+---------+---------+
 6 rows in set (0.00 sec)
-
+--------------------------------------------------------------------------
 mysql> select * from student where city='lucknow';
 +----------+---------+---------+---------+
 | id       | name    | city    | country |
@@ -45,7 +45,7 @@ mysql> select * from student where city='lucknow';
 | 24234236 | ramsigh | lucknow | india   |
 +----------+---------+---------+---------+
 4 rows in set (0.00 sec)
-
+--------------------------------------------------------------------------
 mysql> select * from student where country='india';
 +----------+---------+---------+---------+
 | id       | name    | city    | country |
@@ -57,7 +57,7 @@ mysql> select * from student where country='india';
 | 24234236 | ramsigh | lucknow | india   |
 +----------+---------+---------+---------+
 5 rows in set (0.00 sec)
-
+--------------------------------------------------------------------------
 mysql> select * from student where country='india';
 +----------+---------+---------+---------+
 | id       | name    | city    | country |
@@ -69,7 +69,7 @@ mysql> select * from student where country='india';
 | 24234236 | ramsigh | lucknow | india   |
 +----------+---------+---------+---------+
 5 rows in set (0.00 sec)
-
+--------------------------------------------------------------------------
 mysql> select name,city,country from student where country='india';
 +---------+---------+---------+
 | name    | city    | country |
@@ -81,7 +81,7 @@ mysql> select name,city,country from student where country='india';
 | ramsigh | lucknow | india   |
 +---------+---------+---------+
 5 rows in set (0.00 sec)
-
+--------------------------------------------------------------------------
 mysql> select name as  "USERNAME" , city as "CITYNAME" from student ;
 +----------+----------+
 | USERNAME | CITYNAME |
@@ -94,7 +94,7 @@ mysql> select name as  "USERNAME" , city as "CITYNAME" from student ;
 | ramsigh  | lucknow  |
 +----------+----------+
 6 rows in set (0.00 sec)
-
+--------------------------------------------------------------------------
 mysql> select * from student where city='kanpur';
 +------+------+--------+---------+
 | id   | name | city   | country |
@@ -102,7 +102,7 @@ mysql> select * from student where city='kanpur';
 | 2334 | aman | kanpur | india   |
 +------+------+--------+---------+
 1 row in set (0.00 sec)
-
+--------------------------------------------------------------------------
 mysql> select * from student;
 +----------+---------+---------+---------+
 | id       | name    | city    | country |
@@ -115,7 +115,7 @@ mysql> select * from student;
 | 24234236 | ramsigh | lucknow | india   |
 +----------+---------+---------+---------+
 6 rows in set (0.00 sec)
-
+--------------------------------------------------------------------------
 mysql> select country from student;
 +---------+
 | country |
@@ -128,7 +128,7 @@ mysql> select country from student;
 | india   |
 +---------+
 6 rows in set (0.00 sec)
-
+--------------------------------------------------------------------------
 mysql> select distinct(country) from student;
 +---------+
 | country |
@@ -137,7 +137,7 @@ mysql> select distinct(country) from student;
 | india   |
 +---------+
 2 rows in set (0.00 sec)
-
+--------------------------------------------------------------------------
 mysql> select * from student;
 +----------+---------+---------+---------+
 | id       | name    | city    | country |
@@ -150,7 +150,7 @@ mysql> select * from student;
 | 24234236 | ramsigh | lucknow | india   |
 +----------+---------+---------+---------+
 6 rows in set (0.00 sec)
-
+--------------------------------------------------------------------------
 mysql> select * from student where country='india' and  city='lucknow';
 +----------+---------+---------+---------+
 | id       | name    | city    | country |
@@ -161,7 +161,7 @@ mysql> select * from student where country='india' and  city='lucknow';
 | 24234236 | ramsigh | lucknow | india   |
 +----------+---------+---------+---------+
 4 rows in set (0.00 sec)
-
+--------------------------------------------------------------------------
 mysql> select * from student where country='india' or city='lucknow';
 +----------+---------+---------+---------+
 | id       | name    | city    | country |
@@ -173,9 +173,7 @@ mysql> select * from student where country='india' or city='lucknow';
 | 24234236 | ramsigh | lucknow | india   |
 +----------+---------+---------+---------+
 5 rows in set (0.00 sec)
-
-mysql> select * from user;
-ERROR 1146 (42S02): Table 'learn.user' doesn't exist
+--------------------------------------------------------------------------
 mysql> select * from student;
 +----------+---------+---------+---------+
 | id       | name    | city    | country |
@@ -188,7 +186,7 @@ mysql> select * from student;
 | 24234236 | ramsigh | lucknow | india   |
 +----------+---------+---------+---------+
 6 rows in set (0.00 sec)
-
+--------------------------------------------------------------------------
 mysql> select * from student where id >=24 and id<=2334;
 +------+--------+---------+---------+
 | id   | name   | city    | country |
@@ -199,7 +197,7 @@ mysql> select * from student where id >=24 and id<=2334;
 | 2334 | aman   | kanpur  | india   |
 +------+--------+---------+---------+
 4 rows in set (0.00 sec)
-
+--------------------------------------------------------------------------
 mysql> select * from student where id between 24 and 2334;
 +------+--------+---------+---------+
 | id   | name   | city    | country |
@@ -210,7 +208,7 @@ mysql> select * from student where id between 24 and 2334;
 | 2334 | aman   | kanpur  | india   |
 +------+--------+---------+---------+
 4 rows in set (0.00 sec)
-
+--------------------------------------------------------------------------
 mysql> select * from student where id >24 and id<2334;
 +-----+--------+---------+---------+
 | id  | name   | city    | country |
@@ -219,7 +217,7 @@ mysql> select * from student where id >24 and id<2334;
 | 246 | sumit  | lucknow | india   |
 +-----+--------+---------+---------+
 2 rows in set (0.00 sec)
-
+--------------------------------------------------------------------------
 mysql> select * from student;
 +----------+---------+---------+---------+
 | id       | name    | city    | country |
@@ -232,7 +230,7 @@ mysql> select * from student;
 | 24234236 | ramsigh | lucknow | india   |
 +----------+---------+---------+---------+
 6 rows in set (0.00 sec)
-
+--------------------------------------------------------------------------
 mysql> select * from student where id=23 or id=234 or id=246;
 +-----+--------+---------+---------+
 | id  | name   | city    | country |
@@ -242,7 +240,7 @@ mysql> select * from student where id=23 or id=234 or id=246;
 | 246 | sumit  | lucknow | india   |
 +-----+--------+---------+---------+
 3 rows in set (0.00 sec)
-
+--------------------------------------------------------------------------
 mysql> select * from student where id in(23,234,246);
 +-----+--------+---------+---------+
 | id  | name   | city    | country |
@@ -252,7 +250,7 @@ mysql> select * from student where id in(23,234,246);
 | 246 | sumit  | lucknow | india   |
 +-----+--------+---------+---------+
 3 rows in set (0.00 sec)
-
+--------------------------------------------------------------------------
 mysql> select * from student;
 +----------+---------+---------+---------+
 | id       | name    | city    | country |
@@ -265,7 +263,7 @@ mysql> select * from student;
 | 24234236 | ramsigh | lucknow | india   |
 +----------+---------+---------+---------+
 6 rows in set (0.00 sec)
-
+--------------------------------------------------------------------------
 mysql> select * from student limit 4;
 +-----+--------+---------+---------+
 | id  | name   | city    | country |
@@ -276,9 +274,7 @@ mysql> select * from student limit 4;
 | 246 | sumit  | lucknow | india   |
 +-----+--------+---------+---------+
 4 rows in set (0.00 sec)
-
-mysql> select * from student limit 2 2;
-ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '2' at line 1
+--------------------------------------------------------------------------
 mysql> select * from student limit 2 offset 2;
 +-----+--------+---------+---------+
 | id  | name   | city    | country |
@@ -287,7 +283,7 @@ mysql> select * from student limit 2 offset 2;
 | 246 | sumit  | lucknow | india   |
 +-----+--------+---------+---------+
 2 rows in set (0.00 sec)
-
+--------------------------------------------------------------------------
 mysql> select * from student;
 +----------+---------+---------+---------+
 | id       | name    | city    | country |
@@ -300,7 +296,7 @@ mysql> select * from student;
 | 24234236 | ramsigh | lucknow | india   |
 +----------+---------+---------+---------+
 6 rows in set (0.00 sec)
-
+--------------------------------------------------------------------------
 mysql> select * from student order by id;
 +----------+---------+---------+---------+
 | id       | name    | city    | country |
@@ -313,7 +309,7 @@ mysql> select * from student order by id;
 | 24234236 | ramsigh | lucknow | india   |
 +----------+---------+---------+---------+
 6 rows in set (0.00 sec)
-
+--------------------------------------------------------------------------
 mysql> select * from student order by id desc;
 +----------+---------+---------+---------+
 | id       | name    | city    | country |
@@ -326,7 +322,7 @@ mysql> select * from student order by id desc;
 |       23 | ankit   | delhi   | ind     |
 +----------+---------+---------+---------+
 6 rows in set (0.00 sec)
-
+--------------------------------------------------------------------------
 mysql> select * from student order by name desc;
 +----------+---------+---------+---------+
 | id       | name    | city    | country |
@@ -339,7 +335,7 @@ mysql> select * from student order by name desc;
 |     2334 | aman    | kanpur  | india   |
 +----------+---------+---------+---------+
 6 rows in set (0.00 sec)
-
+--------------------------------------------------------------------------
 mysql> select * from student order by name asc;
 +----------+---------+---------+---------+
 | id       | name    | city    | country |
@@ -352,7 +348,7 @@ mysql> select * from student order by name asc;
 |      246 | sumit   | lucknow | india   |
 +----------+---------+---------+---------+
 6 rows in set (0.00 sec)
-
+--------------------------------------------------------------------------
 mysql> select * from student order by name;
 +----------+---------+---------+---------+
 | id       | name    | city    | country |
@@ -365,7 +361,7 @@ mysql> select * from student order by name;
 |      246 | sumit   | lucknow | india   |
 +----------+---------+---------+---------+
 6 rows in set (0.00 sec)
-
+--------------------------------------------------------------------------
 mysql> select * from student;
 +----------+---------+---------+---------+
 | id       | name    | city    | country |
@@ -378,7 +374,7 @@ mysql> select * from student;
 | 24234236 | ramsigh | lucknow | india   |
 +----------+---------+---------+---------+
 6 rows in set (0.00 sec)
-
+--------------------------------------------------------------------------
 mysql> select * from student order by id desc limit 2;
 +----------+---------+---------+---------+
 | id       | name    | city    | country |
@@ -387,11 +383,11 @@ mysql> select * from student order by id desc limit 2;
 |     2334 | aman    | kanpur  | india   |
 +----------+---------+---------+---------+
 2 rows in set (0.00 sec)
-
+--------------------------------------------------------------------------
 mysql> update student set name='ram singh' where id=24234236;
 Query OK, 1 row affected (0.02 sec)
 Rows matched: 1  Changed: 1  Warnings: 0
-
+--------------------------------------------------------------------------
 mysql> select * from student;
 +----------+-----------+---------+---------+
 | id       | name      | city    | country |
@@ -404,7 +400,7 @@ mysql> select * from student;
 | 24234236 | ram singh | lucknow | india   |
 +----------+-----------+---------+---------+
 6 rows in set (0.00 sec)
-
+--------------------------------------------------------------------------
 mysql> select * from student;
 +----------+-----------+---------+---------+
 | id       | name      | city    | country |
@@ -417,7 +413,7 @@ mysql> select * from student;
 | 24234236 | ram singh | lucknow | india   |
 +----------+-----------+---------+---------+
 6 rows in set (0.00 sec)
-
+--------------------------------------------------------------------------
 mysql> select * from student where name like 'a%';
 +------+-------+--------+---------+
 | id   | name  | city   | country |
@@ -426,7 +422,7 @@ mysql> select * from student where name like 'a%';
 | 2334 | aman  | kanpur | india   |
 +------+-------+--------+---------+
 2 rows in set (0.00 sec)
-
+--------------------------------------------------------------------------
 mysql> select * from student where city like "_u%";
 +----------+-----------+---------+---------+
 | id       | name      | city    | country |
@@ -437,7 +433,7 @@ mysql> select * from student where city like "_u%";
 | 24234236 | ram singh | lucknow | india   |
 +----------+-----------+---------+---------+
 4 rows in set (0.00 sec)
-
+--------------------------------------------------------------------------
 mysql> select * from student where city like "%o_";
 +----------+-----------+---------+---------+
 | id       | name      | city    | country |
@@ -448,7 +444,7 @@ mysql> select * from student where city like "%o_";
 | 24234236 | ram singh | lucknow | india   |
 +----------+-----------+---------+---------+
 4 rows in set (0.00 sec)
-
+--------------------------------------------------------------------------
 mysql> select * from student;
 +----------+-----------+---------+---------+
 | id       | name      | city    | country |
@@ -461,7 +457,7 @@ mysql> select * from student;
 | 24234236 | ram singh | lucknow | india   |
 +----------+-----------+---------+---------+
 6 rows in set (0.00 sec)
-
+--------------------------------------------------------------------------
 mysql> select SUM(id) from student;
 +----------+
 | SUM(id)  |
@@ -469,7 +465,7 @@ mysql> select SUM(id) from student;
 | 24237097 |
 +----------+
 1 row in set (0.00 sec)
-
+--------------------------------------------------------------------------
 mysql> select SUM(id) as "Total Salary" from student;
 +--------------+
 | Total Salary |
@@ -477,7 +473,7 @@ mysql> select SUM(id) as "Total Salary" from student;
 |     24237097 |
 +--------------+
 1 row in set (0.00 sec)
-
+--------------------------------------------------------------------------
 mysql> select AVG(id) from student;
 +--------------+
 | AVG(id)      |
@@ -485,7 +481,7 @@ mysql> select AVG(id) from student;
 | 4039516.1667 |
 +--------------+
 1 row in set (0.00 sec)
-
+--------------------------------------------------------------------------
 mysql> select COUNT(id) from student;
 +-----------+
 | COUNT(id) |
@@ -493,7 +489,7 @@ mysql> select COUNT(id) from student;
 |         6 |
 +-----------+
 1 row in set (0.00 sec)
-
+--------------------------------------------------------------------------
 mysql> select MIN(id) from student;
 +---------+
 | MIN(id) |
@@ -501,7 +497,7 @@ mysql> select MIN(id) from student;
 |      23 |
 +---------+
 1 row in set (0.00 sec)
-
+--------------------------------------------------------------------------
 mysql> select name from student where id = (select MIN(id) from student) ;
 +-------+
 | name  |
@@ -509,7 +505,7 @@ mysql> select name from student where id = (select MIN(id) from student) ;
 | ankit |
 +-------+
 1 row in set (0.00 sec)
-
+--------------------------------------------------------------------------
 mysql> select name from student where id = (select MAX(id) from student) ;
 +-----------+
 | name      |
@@ -517,7 +513,7 @@ mysql> select name from student where id = (select MAX(id) from student) ;
 | ram singh |
 +-----------+
 1 row in set (0.00 sec)
-
+--------------------------------------------------------------------------
 mysql> show tables;
 +-----------------+
 | Tables_in_learn |
@@ -525,7 +521,7 @@ mysql> show tables;
 | student         |
 +-----------------+
 1 row in set (0.00 sec)
-
+--------------------------------------------------------------------------
 mysql> select * from student;
 +----------+-----------+---------+---------+
 | id       | name      | city    | country |
@@ -538,10 +534,10 @@ mysql> select * from student;
 | 24234236 | ram singh | lucknow | india   |
 +----------+-----------+---------+---------+
 6 rows in set (0.00 sec)
-
+--------------------------------------------------------------------------
 mysql> create table laptops(lid int primary key, lmodel varchar(200), studentId int , foreign key(studentId) references student(id));
 Query OK, 0 rows affected (0.09 sec)
-
+--------------------------------------------------------------------------
 mysql> show tables;
 +-----------------+
 | Tables_in_learn |
@@ -550,7 +546,7 @@ mysql> show tables;
 | student         |
 +-----------------+
 2 rows in set (0.00 sec)
-
+--------------------------------------------------------------------------
 mysql> desc student;
 +---------+--------------+------+-----+---------+-------+
 | Field   | Type         | Null | Key | Default | Extra |
@@ -561,7 +557,7 @@ mysql> desc student;
 | country | varchar(50)  | YES  |     | NULL    |       |
 +---------+--------------+------+-----+---------+-------+
 4 rows in set (0.00 sec)
-
+--------------------------------------------------------------------------
 mysql> desc laptops;
 +-----------+--------------+------+-----+---------+-------+
 | Field     | Type         | Null | Key | Default | Extra |
@@ -571,12 +567,12 @@ mysql> desc laptops;
 | studentId | int          | YES  | MUL | NULL    |       |
 +-----------+--------------+------+-----+---------+-------+
 3 rows in set (0.00 sec)
-
+--------------------------------------------------------------------------
 mysql> insert into laptops values(13414,'HP',96418565);
 ERROR 1452 (23000): Cannot add or update a child row: a foreign key constraint fails (`learn`.`laptops`, CONSTRAINT `laptops_ibfk_1` FOREIGN KEY (`studentId`) REFERENCES `student` (`id`))
 mysql> insert into laptops values(13414,'HP',23);
 Query OK, 1 row affected (0.00 sec)
-
+--------------------------------------------------------------------------
 mysql> select * from laptops;
 +-------+--------+-----------+
 | lid   | lmodel | studentId |
@@ -584,12 +580,12 @@ mysql> select * from laptops;
 | 13414 | HP     |        23 |
 +-------+--------+-----------+
 1 row in set (0.00 sec)
-
+--------------------------------------------------------------------------
 mysql> insert into laptops values(13414,'Dell',24);
 ERROR 1062 (23000): Duplicate entry '13414' for key 'laptops.PRIMARY'
 mysql> insert into laptops values(134132454,'Dell',24);
 Query OK, 1 row affected (0.00 sec)
-
+--------------------------------------------------------------------------
 mysql> select * from laptops;
 +-----------+--------+-----------+
 | lid       | lmodel | studentId |
@@ -598,7 +594,7 @@ mysql> select * from laptops;
 | 134132454 | Dell   |        24 |
 +-----------+--------+-----------+
 2 rows in set (0.00 sec)
-
+--------------------------------------------------------------------------
 mysql> select * from student;
 +----------+-----------+---------+---------+
 | id       | name      | city    | country |
@@ -611,7 +607,7 @@ mysql> select * from student;
 | 24234236 | ram singh | lucknow | india   |
 +----------+-----------+---------+---------+
 6 rows in set (0.00 sec)
-
+--------------------------------------------------------------------------
 mysql> select student.name,student.city , laptops.lmodel from student , laptops where student.id=laptops.studentId;
 +--------+---------+--------+
 | name   | city    | lmodel |
@@ -620,7 +616,7 @@ mysql> select student.name,student.city , laptops.lmodel from student , laptops 
 | sanket | lucknow | Dell   |
 +--------+---------+--------+
 2 rows in set (0.00 sec)
-
+--------------------------------------------------------------------------
 mysql> select student.name,student.city , laptops.lmodel from student , laptops where student.id=laptops.studentId and student.name='Ankit';
 +-------+-------+--------+
 | name  | city  | lmodel |
@@ -628,7 +624,7 @@ mysql> select student.name,student.city , laptops.lmodel from student , laptops 
 | ankit | delhi | HP     |
 +-------+-------+--------+
 1 row in set (0.00 sec)
-
+--------------------------------------------------------------------------
 mysql> select student.name , laptops.lmodel from student inner join laptops on student.id=laptops.studentId;
 +--------+--------+
 | name   | lmodel |
@@ -637,5 +633,4 @@ mysql> select student.name , laptops.lmodel from student inner join laptops on s
 | sanket | Dell   |
 +--------+--------+
 2 rows in set (0.00 sec)
-
-mysql>
+--------------------------------------------------------------------------
