@@ -15,7 +15,7 @@ alter table [old table name] rename to [new name];
 truncate table [table_name];
 
 insert into [table_name](id,name,city) values(12,'durgesh','delhi');
-insert intor [table_name] values(12,'ankit','kanpur');
+insert into [table_name] values(12,'ankit','kanpur');
 
 alter table [table_name] add col1;
 update [table_name] set col= value , col = value where col=value;
