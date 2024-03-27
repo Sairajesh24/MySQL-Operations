@@ -12,7 +12,7 @@ desc [tb_name];
 drop table [table_name];
 
 alter table [old table name] rename to [new name];
-truncate table [table_name];
+TRUNCATE TABLE [table_name];
 
 insert into [table_name](id,name,city) values(12,'durgesh','delhi');
 insert into [table_name] values(12,'ankit','kanpur');
